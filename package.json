@@ -1,29 +1,32 @@
-{
-  "name": "demo-dryft",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@anthropic-ai/sdk": "^0.39.0",
-    "next": "^14.1.0",
-    "pdf-parse": "^1.1.1",
-    "pdfjs-dist": "^5.0.375",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-icons": "^5.5.0"
-  },
-  "devDependencies": {
-    "@types/node": "20.17.24",
-    "@types/react": "18.3.18",
-    "@types/react-dom": "^18.2.19",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^3.4.17",
-    "typescript": "5.8.2"
+﻿{
+    "name": "sqg-tfv2",
+    "version": "0.1.0",
+    "private": true,
+    "description": "Sales Quote Generator",
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint"
+    },
+    "dependencies": {
+      "next": "14.1.0",
+      "react": "18.2.0",
+      "react-dom": "18.2.0",
+      "pdf-parse": "1.1.1",
+      "@radix-ui/react-slot": "1.0.2",
+      "class-variance-authority": "0.7.0",
+      "pdfjs-dist": "3.11.174",
+      "react-dropzone": "^14.2.3"
+    },
+    "devDependencies": {
+      "@types/node": "20.11.24",
+      "@types/react": "18.2.61",
+      "@types/react-dom": "18.2.19",
+      "typescript": "5.3.3",
+      "autoprefixer": "10.4.18",
+      "postcss": "8.4.35",
+      "tailwindcss": "3.4.1",
+      "cross-env": "^7.0.3"
+    }
   }
-}
