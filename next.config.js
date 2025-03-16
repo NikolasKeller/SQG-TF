@@ -1,23 +1,17 @@
+# Erstelle oder aktualisiere next.config.js
+@"
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   
-  // Konfiguration für API-Anfragen
+  // Aktualisierte Konfiguration für Next.js 15.x
   experimental: {
-    serverComponentsExternalPackages: ['pdf-parse'],
+    // serverComponentsExternalPackages wurde zu serverExternalPackages
+    serverExternalPackages: ['pdf-parse'],
     // Erhöhe die Zeitbeschränkung für API-Anfragen
     serverActions: {
       bodySizeLimit: '10mb', // Erhöhe die Größenbeschränkung für API-Anfragen
     },
-  },
-  
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      'pdfjs-dist': require.resolve('pdfjs-dist'),
-    };
-    return config
   },
   
   env: {
@@ -29,4 +23,5 @@ const nextConfig = {
   }
 }
 
-module.exports = nextConfig 
+module.exports = nextConfig
+"@ | Out-File -FilePath "next.config.js" -Encoding utf8

@@ -1,0 +1,12 @@
+# Erstelle oder aktualisiere railway.toml
+@"
+[build]
+builder = "NIXPACKS"
+buildCommand = "npm run build"
+
+[deploy]
+startCommand = "npm start"
+healthcheckPath = "/"
+healthcheckTimeout = 100
+restartPolicyType = "ON_FAILURE"
+"@ | Out-File -FilePath "railway.toml" -Encoding utf8
